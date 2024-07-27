@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт с кнопками</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 390px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .grey-container {
+            width: 100%;
+            max-width: 390px;
+            background-color: #C0CADA; /* Серый фон */
+            height: 50px;
+            position: absolute;
+            top: 0; /* Располагается у верхнего края экрана */
+            left: 0;
+            z-index: 1;
+        }
+
+        .middle-container {
+            width: 100%;
+            max-width: 390px;
+            background-image: url('https://iimg.su/s/26/qWtdVGZ91aGqaShCAAKoDC7AvXX4279PIxg00gzO.png');
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            top: 50px; /* Начинается сразу ниже серого контейнера */
+            left: 0;
+            bottom: 100px; /* Расположение до нижнего контейнера */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+        }
+
+        .bottom-container {
+            width: 100%;
+            max-width: 390px;
+            background-color: #713d1b;
+            height: 100px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 3;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .button-container button {
+            flex: 1;
+            margin: 0 5px;
+            padding: 10px;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button-container button img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .button-container button:first-child {
+            margin-left: 0;
+        }
+
+        .button-container button:last-child {
+            margin-right: 0;
+        }
+
+        .middle-container button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .middle-container button img {
+            width: 200px; /* Увеличение размера изображения в два раза */
+            height: 200px; /* Увеличение размера изображения в два раза */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="grey-container">
+            <!-- Серый контейнер -->
+        </div>
+        <div class="middle-container">
+            <button>
+                <img src="https://iimg.su/s/27/wxreTumTB3kdiPU2NsGbf9CO0T5EAI1E32uofGdf.png" alt="Central Button">
+            </button>
+        </div>
+        <div class="bottom-container">
+            <div class="button-container">
+                <button><img src="https://i.postimg.cc/L6TGYmHT/7.png" alt="Referals"></button>
+                <button><img src="https://i.postimg.cc/g22Q31jP/9.png" alt="Oreo"></button>
+                <button><img src="https://i.postimg.cc/tg1cMPFS/6.png" alt="Mining"></button>
+                <button><img src="https://i.postimg.cc/PxYRtj31/8.png" alt="Tasks"></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
